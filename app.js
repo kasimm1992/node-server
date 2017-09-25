@@ -5,20 +5,22 @@ var app = express();
 
 const port = process.env.port || 3000;
 
-app.use((req,res,next) =>{
-
-    var now = new Date().toString();
-
-    var log = `${now}:${req.method} ${req.url}`;
-
-    console.log(log);
-    next();
-
-});
-
 hbs.registerPartials(__dirname + '/Views/partials');
 
 app.set('view engine','hbs');
+
+// app.use((req,res,next) =>{
+//
+//     var now = new Date().toString();
+//
+//     var log = `${now}:${req.method} ${req.url}`;
+//
+//     console.log(log);
+//     next();
+//
+// });
+
+
 
 hbs.registerHelper('currentYear', ()=>{
    return  new Date().getFullYear();
@@ -35,11 +37,9 @@ hbs.registerHelper('currentYear', ()=>{
 // });
 
 app.get('/',  (req,res)=> {
-console.log('hi')
+
     res.render('home.hbs' , {
-
         pageTitle:'Home Page'
-
     })
 });
 
