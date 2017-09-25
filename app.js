@@ -4,10 +4,8 @@ const fs = require('fs');
 var app = express();
 
 
-
-hbs.registerPartials(__dirname + '/Views/partials');
-
 app.set('view engine','hbs');
+hbs.registerPartials(__dirname + '/views/partials');
 
 // app.use((req,res,next) =>{
 //
