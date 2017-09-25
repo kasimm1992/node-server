@@ -39,6 +39,7 @@ app.get('/',  (req,res)=> {
     res.render('home.hbs' , {
         pageTitle:'Home Page'
     })
+    console.log("hello heroku")
 });
 
 
