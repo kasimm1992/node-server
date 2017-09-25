@@ -3,19 +3,7 @@ var hbs = require('hbs');
 const fs = require('fs');
 var app = express();
 
-// app.use((req,res,next)=>{
-//
-//     var log = `${Date().toString()} : ${req.method} ${req.url}`;
-//    // console.log(log);
-//     fs.appendFile('' , log + '\n', (err,data)=>{
-//         if(err) throw err;
-//         else {
-//             console.log(data)
-//             next();
-//         }
-//     })
-//
-// });
+const port = process.env.port || 3000;
 
 app.use((req,res,next) =>{
 
@@ -73,8 +61,8 @@ app.get('/name',(req,res)=>{
        )
 });
 
-app.listen(3000 , ()=>{
-    console.log("server running on port 3000")
+app.listen(port , ()=>{
+    console.log(`server running on port ${port}`)
 });
 
 
