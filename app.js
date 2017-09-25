@@ -55,7 +55,7 @@ app.get('/',  (req,res)=> {
     })
 });
 
-d
+
 app.get('/about',  (req,res)=> {
 
     res.render('about.hbs',{
