@@ -45,7 +45,7 @@ hbs.registerHelper('currentYear', ()=>{
 //     res.render('Maintnec.hbs');
 //     next();
 // });
-xxx
+
 app.get('/',  (req,res)=> {
 console.log('hi')
     res.render('home.hbs' , {
